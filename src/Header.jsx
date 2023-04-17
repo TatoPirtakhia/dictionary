@@ -1,9 +1,10 @@
 import { useState } from "react";
 import "./Header.css";
 import Words from "./Wors";
-function Header() {
+function Header(props) {
   const [input, setInput] = useState("");
   const [font, setFont] = useState("");
+ 
   let data = "";
   async function getData(word) {
     data = await Words(word);
@@ -33,14 +34,14 @@ function Header() {
           </g>
         </svg>
         <div className="right">
-          <select className="fonts" onChange={(event) => setFont(event.target.value)}>
+          <select className={props.dark?"dark_fonts":"fonts"} onChange={(event) => setFont(event.target.value)}>
             <option value="Sans Serif">Sans Serif</option>
             <option value="Serif">Serif</option>
             <option value="Mono">Mono</option>
           </select>
 
           <div className="darkmode">
-            <div className="circle_container">
+            <div className={props.dark ?"dark_circle_container" : "circle_container"} onClick={props.swich}>
               <div className="circle"></div>
             </div>
             <svg
@@ -51,7 +52,7 @@ function Header() {
             >
               <path
                 fill="none"
-                stroke="#838383"
+                stroke={props.dark?"#A445ED":"#838383"}
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1.5"
@@ -62,6 +63,7 @@ function Header() {
         </div>
       </nav>
       <input
+        className={props.dark?"dark_input":''}
         type="text"
         onChange={typed}
         value={input}
