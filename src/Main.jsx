@@ -19,13 +19,25 @@ function Main(props) {
     const audio = new Audio(audiourl);
     audio.play();
   };
-  const aboutWords = meanings.map((data,id)=>{
+  const aboutWords = meanings.map((data, id) => {
     return (
-        <div key={id}>
-            <h1>{data.partOfSpeech}</h1>
-        </div>
-    )
-  })
+      <div key={id} className="box">
+        <h1 className={`main_title ${props.font}`}>{data.partOfSpeech}</h1>
+        <p className={`Meaning ${props.font}Regular`}>Meaning</p>
+        <ul>
+          {data.definitions.map((item, key) => {
+            return (
+              <li key={key} className={`definition ${props.font}Regular`}>
+                <p>{item.definition}</p>
+                {item.example!==undefined? <p className="example">{`"${item.example}"`}</p> : ""}
+              </li>
+            );
+          })}
+        </ul>
+      </div>
+    );
+  });
+
   return (
     <main>
       <div className="word_audio">
@@ -47,9 +59,7 @@ function Main(props) {
           </g>
         </svg>
       </div>
-      <div className="meanings">
-        {aboutWords}
-      </div>
+      <div className="meanings">{aboutWords}</div>
     </main>
   );
 }
