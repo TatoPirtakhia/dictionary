@@ -33,16 +33,18 @@ nav {
   display: flex;
   align-items: center;
   transition: all 0.5s ease-in-out;
+  cursor: pointer;
 }
-.dark_circle_container{
-    width: 40px;
-    height: 20px;
-    border-radius: 10px;
-    background-color: #A445ED;
-    padding-left: 20px;
-    display: flex;
-    align-items: center;
-    transition: all 0.5s ease-in-out;
+.dark_circle_container {
+  cursor: pointer;
+  width: 40px;
+  height: 20px;
+  border-radius: 10px;
+  background-color: #a445ed;
+  padding-left: 20px;
+  display: flex;
+  align-items: center;
+  transition: all 0.5s ease-in-out;
 }
 .circle {
   width: 14px;
@@ -56,21 +58,35 @@ nav {
   cursor: pointer;
   -webkit-appearance: none;
   -moz-appearance: none;
-  color: #2D2D2D;
+  color: #2d2d2d;
   background-color: #ffffff;
-  width: 70px;
+  background-image: url("./images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 30px;
+  width: 100px;
+  height: 24px;
+  font-size: 14px;
+  font-weight: 700;
   text-align-last: right;
 }
-.dark_fonts{
-    outline: none;
-    border: none;
-    cursor: pointer;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-color: #050505;
-    color: #FFFFFF;
-    width: 70px;
-    text-align-last: right;
+.dark_fonts {
+  font-size: 14px;
+  font-weight: 700;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-color: #050505;
+  color: #ffffff;
+  background-image: url("./images/icon-arrow-down.svg");
+  background-repeat: no-repeat;
+  background-position: right center;
+  padding-right: 30px;
+  width: 100px;
+  height: 24px;
+  text-align-last: right;
 }
 select option:checked {
   display: none;
@@ -86,13 +102,13 @@ input {
   border: none;
   background-color: #f4f4f4;
 }
-.dark_input{
-    margin-top: 25px;
-    width: 327px;
-    height: 48px;
-    padding-left: 24px;
-    border-radius: 16px;
-    outline: none;
-    border: none;
-    background-color: #1F1F1F;
+.dark_input {
+  margin-top: 25px;
+  width: 327px;
+  height: 48px;
+  padding-left: 24px;
+  border-radius: 16px;
+  outline: none;
+  border: none;
+  background-color: #1f1f1f;
 }

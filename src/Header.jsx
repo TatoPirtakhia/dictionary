@@ -3,11 +3,10 @@ import "./Header.css";
 import Words from "./Wors";
 function Header(props) {
   const [input, setInput] = useState("");
-  const [font, setFont] = useState("");
- 
   let data = "";
   async function getData(word) {
     data = await Words(word);
+    props.setData(data)
   }
   const typed = (event) => {
     setInput(event.target.value);
@@ -34,10 +33,10 @@ function Header(props) {
           </g>
         </svg>
         <div className="right">
-          <select className={props.dark?"dark_fonts":"fonts"} onChange={(event) => setFont(event.target.value)}>
-            <option value="Sans Serif">Sans Serif</option>
-            <option value="Serif">Serif</option>
-            <option value="Mono">Mono</option>
+          <select className={props.dark?`dark_fonts ${props.font}Bold`:`fonts ${props.font}Bold`} onChange={(event) => props.setFont(event.target.value)}>
+            <option value="inter">Sans Serif</option>
+            <option value="lora">Serif</option>
+            <option value="inconsolata">Mono</option>
           </select>
 
           <div className="darkmode">

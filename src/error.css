@@ -1,0 +1,23 @@
+.errorpage{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 132px;
+}
+
+.errorTitle{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 44px;
+    margin-bottom: 24px;
+}
+.errorParagraph{
+    width: 327px;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 400;
+}
+.smile{
+    font-size: 48px;
+    line-height: 64px;
+}

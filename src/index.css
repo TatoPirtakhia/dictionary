@@ -1,3 +1,78 @@
+
+
+@font-face {
+  font-family: "inconsolata Bold";
+  src: url("./fonts/inconsolata/static/Inconsolata-Bold.ttf");
+}
+.inconsolataBold{
+  font-family: "inconsolata Bold";
+}
+@font-face {
+  font-family: "inconsolata Regular";
+  src: url("./fonts/inconsolata/static/Inconsolata-Regular.ttf");
+}
+.inconsolataRegular{
+  font-family: "inconsolata Regular";
+}
+@font-face {
+  font-family: "inconsolata";
+  src: url("./fonts/inconsolata/Inconsolata-VariableFont_wdth\,wght.ttf");
+}
+.inconsolata{
+  font-family: "inconsolata";
+}
+
+
+
+
+@font-face {
+  font-family: "inter Bold";
+  src: url("./fonts/inter/static/Inter-Bold.ttf");
+}
+.interBold{
+  font-family: "inter Bold";
+}
+@font-face {
+  font-family: "inter Regular";
+  src: url("./fonts//inter/static/Inter-Regular.ttf");
+}
+.interRegular{
+  font-family: "inter Regular";
+}
+@font-face {
+  font-family: "inter";
+  src: url("./fonts/inter/Inter-VariableFont_slnt\,wght.ttf");
+}
+.inter{
+  font-family: "inter";
+}
+
+@font-face {
+  font-family: "lora Bold";
+  src: url("./fonts/lora/static/Lora-Bold.ttf");
+}
+.loraBold{
+  font-family: "lora Bold";
+}
+@font-face {
+  font-family: "lora Regular";
+  src: url("./fonts/lora/static/Lora-Regular.ttf");
+}
+.loraRegular{
+  font-family: "lora Regular";
+}
+@font-face {
+  font-family: "lora";
+  src: url("./fonts/lora/Lora-Italic-VariableFont_wght.ttf");
+}
+.lora{
+  font-family: "lora";
+}
+
+
+
+
+
 *{
   margin: 0;
   padding: 0;
@@ -16,9 +91,12 @@ body{
   align-items: center;
   flex-direction: column;
   background-color: #050505;
+  transition: all 0.3s ease;
+  
   
 }
 .notDark_body{
+  transition: all 0.3s ease;
   background-color: #FFFFFF;
   width: 100%;
   height: 100%;

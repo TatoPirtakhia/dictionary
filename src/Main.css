@@ -1,0 +1,23 @@
+main{
+    margin-top: 30px;
+}
+.word_audio{
+    width: 327px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.audio{
+    width: 48px;
+    height: 48px;
+}
+.title{
+    font-size: 32px;
+    font-weight: 700;
+}
+.phonetic{
+    margin-top: 10px;
+    color: #A445ED;
+    font-weight: 400;
+    font-size: 18px;
+}
