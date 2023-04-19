@@ -69,6 +69,7 @@ nav {
   font-size: 14px;
   font-weight: 700;
   text-align-last: right;
+  transition: all 0.3s ease;
 }
 .dark_fonts {
   font-size: 14px;
@@ -87,12 +88,13 @@ nav {
   width: 100px;
   height: 24px;
   text-align-last: right;
+  transition: all 0.3s ease;
 }
 select option:checked {
   display: none;
 }
 
-input {
+.input {
   margin-top: 25px;
   width: 327px;
   height: 48px;
@@ -101,6 +103,7 @@ input {
   outline: none;
   border: none;
   background-color: #f4f4f4;
+  transition: all 0.3s ease;
 }
 .dark_input {
   margin-top: 25px;
@@ -111,4 +114,5 @@ input {
   outline: none;
   border: none;
   background-color: #1f1f1f;
+  transition: all 0.3s ease;
 }

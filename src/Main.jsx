@@ -1,7 +1,7 @@
 import "./Main.css";
 
 function Main(props) {
-  const { phonetics, word, meanings } = props.data;
+  const { phonetics, word, meanings, sourceUrls } = props.data;
   let audiourl = "";
   for (let index = 0; index < phonetics.length; index++) {
     if (phonetics[index].audio !== "") {
@@ -15,7 +15,7 @@ function Main(props) {
     }
   }
   const playAudio = () => {
-    console.log(phonetics);
+    console.log(sourceUrls);
     const audio = new Audio(audiourl);
     audio.play();
   };
@@ -29,10 +29,32 @@ function Main(props) {
             return (
               <li key={key} className={`definition ${props.font}Regular`}>
                 <p>{item.definition}</p>
-                {item.example!==undefined? <p className="example">{`"${item.example}"`}</p> : ""}
+                {item.example !== undefined ? (
+                  <p className="example">{`"${item.example}"`}</p>
+                ) : (
+                  ""
+                )}
               </li>
             );
           })}
+          <div className="synonym_box">
+            {data.synonyms !== undefined && data.synonyms.length !== 0 ? (
+              <p className={`${props.font}Regular Synonyms`}>Synonyms</p>
+            ) : (
+              ""
+            )}
+            <div className="synonym">
+              {data.synonyms !== undefined && data.synonyms.length !== 0
+                ? data.synonyms.map((word, id) => {
+                    return (
+                      <p key={id} className={`synonyms ${props.font}Bold`}>
+                        {word}
+                      </p>
+                    );
+                  })
+                : ""}
+            </div>
+          </div>
         </ul>
       </div>
     );
@@ -60,6 +82,29 @@ function Main(props) {
         </svg>
       </div>
       <div className="meanings">{aboutWords}</div>
+      <div className="source">
+        <p className={`${props.font}Regular source_title`}>Source</p>
+        <div className="link_icon">
+          <a href={sourceUrls} className="link" target="_blank">
+            Click for more imformation
+          </a>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="14"
+            height="14"
+            viewBox="0 0 14 14"
+          >
+            <path
+              fill="none"
+              stroke="#838383"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="1.5"
+              d="M6.09 3.545H2.456A1.455 1.455 0 0 0 1 5v6.545A1.455 1.455 0 0 0 2.455 13H9a1.455 1.455 0 0 0 1.455-1.455V7.91m-5.091.727 7.272-7.272m0 0H9m3.636 0V5"
+            />
+          </svg>
+        </div>
+      </div>
     </main>
   );
 }

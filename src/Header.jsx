@@ -62,7 +62,7 @@ function Header(props) {
         </div>
       </nav>
       <input
-        className={props.dark?"dark_input":''}
+        className={props.dark?"dark_input":'input'}
         type="text"
         onChange={typed}
         value={input}
