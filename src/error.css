@@ -1,43 +1,56 @@
-.errorpage{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 132px;
+.errorpage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin-top: 100px;
 }
 
-.errorTitle{
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 44px;
-    margin-bottom: 24px;
-    transition: all 0.3s ease;
-    color:#2D2D2D ;
+.errorTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 44px;
+  margin-bottom: 24px;
+  transition: all 0.3s ease;
+  color: #2d2d2d;
 }
-.dark_errorTitle{
-    font-size: 20px;
-    font-weight: 700;
-    margin-top: 44px;
-    margin-bottom: 24px;
-    color:#FFFFFF ;
-    transition: all 0.3s ease;
+.dark_errorTitle {
+  font-size: 20px;
+  font-weight: 700;
+  margin-top: 44px;
+  margin-bottom: 24px;
+  color: #ffffff;
+  transition: all 0.3s ease;
 }
-.errorParagraph{
-    width: 327px;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 400;
-    transition: all 0.3s ease;
-    color: #757575;
+.errorParagraph {
+  width: 327px;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 400;
+  transition: all 0.3s ease;
+  color: #757575;
 }
-.dark_errorParagraph{
-    width: 327px;
-    text-align: center;
-    transition: all 0.3s ease;
-    font-size: 18px;
-    font-weight: 400;
-    color: #757575;
+.dark_errorParagraph {
+  width: 327px;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  font-weight: 400;
+  color: #757575;
 }
-.smile{
-    font-size: 48px;
-    line-height: 64px;
+.smile {
+  font-size: 48px;
+  line-height: 64px;
+}
+
+@media (min-width: 768px) {
+  .errorpage {
+    margin-top: 132px;
+  }
+
+  .errorParagraph {
+    width: 736px;
+  }
+  .dark_errorParagraph {
+    width: 736px;
+  }
 }

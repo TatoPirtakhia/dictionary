@@ -237,9 +237,42 @@ select option:checked {
   .spanActive {
     margin-top: 5px;
     font-size: 20px;
-   
   }
   .spanDisable {
     font-size: 20px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .shearch {
+    position: absolute;
+    right: 20px;
+    top: 83px;
+  }
+  nav {
+    width: 736px;
+  }
+  .input {
+    font-size: 20px;
+    margin-top: 60px;
+    width: 736px;
+    height: 64px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  .inputDisable {
+   cursor: pointer;
+    width: 736px;
+  }
+  .dark_input {
+    width: 736px;
+    cursor: pointer;
+  }
+  .dark_inputDisable {
+    width: 736px;
+    cursor: pointer;
+  }
+  .circle_container:hover{
+    background-color: #A445ED;
   }
 }

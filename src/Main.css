@@ -11,6 +11,7 @@ main {
 .audio {
   width: 48px;
   height: 48px;
+  cursor: pointer;
 }
 .title {
   font-size: 32px;
@@ -274,5 +275,74 @@ ul li::before {
     flex-direction: row;
     gap: 10px;
     width: 690px;
+  }
+}
+
+@media (min-width: 1440px) {
+  main {
+    margin-top: 45px;
+    padding-bottom: 124px;
+  }
+  .word_audio {
+    width: 737px
+  }
+
+
+
+  .box {
+    width: 737px;
+  }
+  .dark_box {
+    width: 737px;
+  }
+
+
+  .definition {
+    font-size: 18px;
+    width: 690px;
+  }
+  .dark_definition {
+    font-size: 18px;
+    width: 690px;
+  }
+  .synonym {
+    display: flex;
+    flex-wrap: wrap;
+    width: 600px;
+    gap: 10px;
+  }
+  .synonyms {
+    font-size: 20px;
+  }
+  .example {
+    font-size: 18px;
+  }
+  .Synonyms{
+    font-size: 20px;
+  }
+
+  .source {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 737px;
+  }
+  .dark_source {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 10px;
+    width: 737px;
+  }
+  .audio:hover circle{
+    opacity:1;
+  }
+  .audio:hover path{
+    fill:#FFFFFF ;
+  }
+  .synonyms:hover{
+    text-decoration-line: underline;
+    cursor: pointer;
   }
 }
