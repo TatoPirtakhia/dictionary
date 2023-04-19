@@ -10,12 +10,32 @@
     font-weight: 700;
     margin-top: 44px;
     margin-bottom: 24px;
+    transition: all 0.3s ease;
+    color:#2D2D2D ;
+}
+.dark_errorTitle{
+    font-size: 20px;
+    font-weight: 700;
+    margin-top: 44px;
+    margin-bottom: 24px;
+    color:#FFFFFF ;
+    transition: all 0.3s ease;
 }
 .errorParagraph{
     width: 327px;
     text-align: center;
     font-size: 18px;
     font-weight: 400;
+    transition: all 0.3s ease;
+    color: #757575;
+}
+.dark_errorParagraph{
+    width: 327px;
+    text-align: center;
+    transition: all 0.3s ease;
+    font-size: 18px;
+    font-weight: 400;
+    color: #757575;
 }
 .smile{
     font-size: 48px;

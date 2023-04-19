@@ -11,10 +11,13 @@ nav {
   align-items: center;
   justify-content: space-between;
 }
-.input_icon{
+.input_icon {
   position: relative;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
 }
-.shearch{
+.shearch {
   position: absolute;
   right: 15px;
   top: 40px;
@@ -116,6 +119,20 @@ select option:checked {
   background-color: #f4f4f4;
   transition: all 0.3s ease;
 }
+.inputDisable {
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 25px;
+  width: 327px;
+  height: 48px;
+  padding-left: 24px;
+  border-radius: 16px;
+  outline: none;
+  border: none;
+  border: 1px solid #ff5252;
+  background-color: #f4f4f4;
+  transition: all 0.3s ease;
+}
 .dark_input {
   font-size: 16px;
   font-weight: 700;
@@ -126,7 +143,103 @@ select option:checked {
   border-radius: 16px;
   outline: none;
   border: none;
-  color: #FFFFFF;
+  color: #ffffff;
   background-color: #1f1f1f;
   transition: all 0.3s ease;
+}
+.dark_input:focus {
+  border: 1px solid #a445ed;
+  transition: all 0.3s ease;
+}
+.input:focus {
+  border: 1px solid #a445ed;
+  transition: all 0.3s ease;
+}
+.dark_inputDisable {
+  border: 1px solid #ff5252;
+  font-size: 16px;
+  font-weight: 700;
+  margin-top: 25px;
+  width: 327px;
+  height: 48px;
+  padding-left: 24px;
+  border-radius: 16px;
+  outline: none;
+  color: #ffffff;
+  background-color: #1f1f1f;
+  transition: all 0.3s ease;
+}
+
+.spanActive {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #ff5252;
+  font-weight: 400;
+  opacity: 0;
+  transition: all 0.3s ease;
+}
+.spanDisable {
+  margin-top: 5px;
+  font-size: 14px;
+  color: #ff5252;
+  font-weight: 400;
+  opacity: 1;
+  transition: all 0.3s ease;
+}
+
+@media (min-width: 768px) {
+  .shearch {
+    position: absolute;
+    right: 20px;
+    top: 83px;
+  }
+  nav {
+    width: 690px;
+  }
+
+  .fonts {
+    width: 120px;
+    font-size: 18px;
+  }
+  .dark_fonts {
+    font-size: 18px;
+    width: 120px;
+  }
+
+  .input {
+    font-size: 20px;
+    margin-top: 60px;
+    width: 690px;
+    height: 64px;
+    transition: all 0.3s ease;
+  }
+  .inputDisable {
+    font-size: 20px;
+    margin-top: 60px;
+    width: 690px;
+    height: 64px;
+    transition: all 0.3s ease;
+  }
+  .dark_input {
+    font-size: 20px;
+    margin-top: 60px;
+    width: 690px;
+    height: 64px;
+    transition: all 0.3s ease;
+  }
+  .dark_inputDisable {
+    font-size: 20px;
+    margin-top: 60px;
+    width: 690px;
+    height: 64px;
+    transition: all 0.3s ease;
+  }
+  .spanActive {
+    margin-top: 5px;
+    font-size: 20px;
+   
+  }
+  .spanDisable {
+    font-size: 20px;
+  }
 }

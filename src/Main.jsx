@@ -28,7 +28,7 @@ function Main(props) {
           {data.definitions.map((item, key) => {
             return (
               <li key={key}className={props.dark?`dark_definition ${props.font}Regular`:`definition ${props.font}Regular`} >
-                <p >{item.definition}</p>
+                <p className="itemDefinition" >{item.definition}</p>
                 {item.example !== undefined ? (
                   <p className="example">{`"${item.example}"`}</p>
                 ) : (
@@ -48,7 +48,7 @@ function Main(props) {
                 ? data.synonyms.map((word, id) => {
                     return (
                       <p key={id} className={`synonyms ${props.font}Bold`}>
-                        {word} ,
+                        {word},
                       </p>
                     );
                   })
@@ -85,8 +85,8 @@ function Main(props) {
       <div className={props.dark?"dark_source":"source"}>
         <p className={`${props.font}Regular source_title`}>Source</p>
         <div className="link_icon">
-          <a href={sourceUrls} className={props.dark?"dark_link":"link"} target="_blank">
-            Click for more imformation
+          <a href={`https://en.wiktionary.org/wiki/${word}`} className={props.dark?"dark_link":"link"} target="_blank">
+          {`https://en.wiktionary.org/wiki/${word}`} 
           </a>
           <svg
             xmlns="http://www.w3.org/2000/svg"

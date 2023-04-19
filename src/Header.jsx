@@ -3,6 +3,7 @@ import "./Header.css";
 import Words from "./Wors";
 function Header(props) {
   const [input, setInput] = useState("");
+  const [empty,setEmpty] = useState(true)
   let data = "";
   async function getData(word) {
     data = await Words(word);
@@ -10,11 +11,16 @@ function Header(props) {
   }
   const typed = (event) => {
     setInput(event.target.value);
+    setEmpty(true)
   };
   const shearchWord = (event) => {
-    if (event.key === "Enter" && input != "") {
+    if (event.key === "Enter") {
+      if(input!==''){ 
       getData(input);
       setInput("");
+    }else{
+      setEmpty(false)
+    }
     }
   };
   return (
@@ -76,10 +82,7 @@ function Header(props) {
       <div className="input_icon">
       <input
       maxLength={20}
-        className={
-          props.dark
-            ? `dark_input ${props.font}Bold`
-            : `input ${props.font}Bold`
+        className={props.dark? empty?`dark_input ${props.font}Bold` :`dark_inputDisable ${props.font}Bold`: empty? `input ${props.font}Bold`:`inputDisable ${props.font}Bold`
         }
         type="text"
         onChange={typed}
@@ -87,6 +90,7 @@ function Header(props) {
         onKeyDown={shearchWord}
         placeholder="Search for any word…"
       />
+      <span className={empty?`spanActive ${props.font}Regular`:`spanDisable ${props.font}Regular`}>Whoops, can’t be empty…</span>
       <svg
         xmlns="http://www.w3.org/2000/svg"
         width="18"
