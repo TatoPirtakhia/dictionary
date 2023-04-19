@@ -21,14 +21,14 @@ function Main(props) {
   };
   const aboutWords = meanings.map((data, id) => {
     return (
-      <div key={id} className="box">
-        <h1 className={`main_title ${props.font}`}>{data.partOfSpeech}</h1>
+      <div key={id} className={props.dark?"dark_box":"box"}>
+        <h1 className={props.dark?`dark_main_title ${props.font}Bold`:`main_title ${props.font}Bold`}>{data.partOfSpeech}</h1>
         <p className={`Meaning ${props.font}Regular`}>Meaning</p>
         <ul>
           {data.definitions.map((item, key) => {
             return (
-              <li key={key} className={`definition ${props.font}Regular`}>
-                <p>{item.definition}</p>
+              <li key={key}className={props.dark?`dark_definition ${props.font}Regular`:`definition ${props.font}Regular`} >
+                <p >{item.definition}</p>
                 {item.example !== undefined ? (
                   <p className="example">{`"${item.example}"`}</p>
                 ) : (
@@ -48,7 +48,7 @@ function Main(props) {
                 ? data.synonyms.map((word, id) => {
                     return (
                       <p key={id} className={`synonyms ${props.font}Bold`}>
-                        {word}
+                        {word} ,
                       </p>
                     );
                   })
@@ -64,7 +64,7 @@ function Main(props) {
     <main>
       <div className="word_audio">
         <div className="word">
-          <h1 className={`title ${props.font}Bold`}>{word}</h1>
+          <h1 className={props.dark?`dark_title ${props.font}Bold`:`title ${props.font}Bold`}>{word}</h1>
           <p className={`phonetic ${props.font}Regular`}>{phonetic}</p>
         </div>
         <svg
@@ -82,10 +82,10 @@ function Main(props) {
         </svg>
       </div>
       <div className="meanings">{aboutWords}</div>
-      <div className="source">
+      <div className={props.dark?"dark_source":"source"}>
         <p className={`${props.font}Regular source_title`}>Source</p>
         <div className="link_icon">
-          <a href={sourceUrls} className="link" target="_blank">
+          <a href={sourceUrls} className={props.dark?"dark_link":"link"} target="_blank">
             Click for more imformation
           </a>
           <svg

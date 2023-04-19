@@ -6,7 +6,7 @@ function Header(props) {
   let data = "";
   async function getData(word) {
     data = await Words(word);
-    props.setData(data)
+    props.setData(data);
   }
   const typed = (event) => {
     setInput(event.target.value);
@@ -33,14 +33,26 @@ function Header(props) {
           </g>
         </svg>
         <div className="right">
-          <select className={props.dark?`dark_fonts ${props.font}Bold`:`fonts ${props.font}Bold`} onChange={(event) => props.setFont(event.target.value)}>
+          <select
+            className={
+              props.dark
+                ? `dark_fonts ${props.font}Bold`
+                : `fonts ${props.font}Bold`
+            }
+            onChange={(event) => props.setFont(event.target.value)}
+          >
             <option value="inter">Sans Serif</option>
             <option value="lora">Serif</option>
             <option value="inconsolata">Mono</option>
           </select>
 
           <div className="darkmode">
-            <div className={props.dark ?"dark_circle_container" : "circle_container"} onClick={props.swich}>
+            <div
+              className={
+                props.dark ? "dark_circle_container" : "circle_container"
+              }
+              onClick={props.swich}
+            >
               <div className="circle"></div>
             </div>
             <svg
@@ -51,7 +63,7 @@ function Header(props) {
             >
               <path
                 fill="none"
-                stroke={props.dark?"#A445ED":"#838383"}
+                stroke={props.dark ? "#A445ED" : "#838383"}
                 strokeLinecap="round"
                 strokeLinejoin="round"
                 strokeWidth="1.5"
@@ -61,14 +73,37 @@ function Header(props) {
           </div>
         </div>
       </nav>
+      <div className="input_icon">
       <input
-        className={props.dark?"dark_input":'input'}
+      maxLength={20}
+        className={
+          props.dark
+            ? `dark_input ${props.font}Bold`
+            : `input ${props.font}Bold`
+        }
         type="text"
         onChange={typed}
         value={input}
         onKeyDown={shearchWord}
         placeholder="Search for any word…"
       />
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="18"
+        height="18"
+        viewBox="0 0 18 18"
+        className="shearch"
+      >
+        <path
+          fill="none"
+          stroke="#A445ED"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="1.5"
+          d="m12.663 12.663 3.887 3.887M1 7.664a6.665 6.665 0 1 0 13.33 0 6.665 6.665 0 0 0-13.33 0Z"
+        />
+      </svg>
+      </div>
     </header>
   );
 }

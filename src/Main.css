@@ -16,6 +16,11 @@ main {
   font-size: 32px;
   font-weight: 700;
 }
+.dark_title{
+  font-size: 32px;
+  font-weight: 700;
+  color:#FFFFFF ;
+}
 .phonetic {
   margin-top: 10px;
   color: #a445ed;
@@ -28,6 +33,15 @@ main {
   display: flex;
   align-items: flex-start;
   flex-direction: column;
+  transition: all 0.3s ease;
+}
+.dark_box{
+  width: 327px;
+  border-top: 2px solid #3A3A3A;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  transition: all 0.3s ease;
 }
 .meanings {
   margin-top: 40px;
@@ -40,6 +54,19 @@ main {
   background-color: #ffffff;
   padding-right: 10px;
   margin-top: -13px;
+  transition: all 0.3s ease;
+  margin-bottom: 31px;
+}
+.dark_main_title{
+  font-size: 18px;
+  font-weight: 700;
+  width: min-content;
+  color: #2d2d2d;
+  background-color: #050505;
+  color: #FFFFFF;
+  padding-right: 10px;
+  margin-top: -13px;
+  transition: all 0.3s ease;
   margin-bottom: 31px;
 }
 .Meaning {
@@ -80,6 +107,17 @@ ul li::before {
   width: 302px;
   text-align: left;
   margin-bottom: 15px;
+  transition: all 0.3s ease;
+}
+.dark_definition{
+  transition: all 0.3s ease;
+  font-size: 15px;
+  font-weight: 400;
+  color: #FFFFFF;
+  line-height: 24px;
+  width: 302px;
+  text-align: left;
+  margin-bottom: 15px;
 }
 .Synonyms{
   font-size: 16px;
@@ -94,8 +132,8 @@ ul li::before {
 }
 .synonym{
  display: flex;
- align-items: center;
- flex-direction: column;
+ flex-wrap: wrap;
+width: 200px;
  gap: 10px;
 }
 .synonyms{
@@ -123,10 +161,26 @@ ul li::before {
   font-weight: 400;
   color: #2D2D2D;
   text-decoration-line: underline;
+  transition: all 0.3s ease;
+}
+.dark_link{
+  font-size: 14px;
+  font-weight: 400;
+  color: #FFFFFF;
+  transition: all 0.3s ease;
+  text-decoration-line: underline;
 }
 .source{
   margin-top: -30px;
   width: 327px;
   padding-top: 25px;
   border-top:2px solid #E9E9E9 ;
+  transition: all 0.3s ease;
+}
+.dark_source{
+  margin-top: -30px;
+  width: 327px;
+  padding-top: 25px;
+  border-top:2px solid #3A3A3A ;
+  transition: all 0.3s ease;
 }
