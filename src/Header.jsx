@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Header.css";
-import Words from "./Wors";
+import Words from "./Words";
 function Header(props) {
   const [input, setInput] = useState("");
   const [empty,setEmpty] = useState(true)
